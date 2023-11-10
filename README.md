@@ -32,25 +32,8 @@ When you open your code in the browser your resulting analysis should look simil
   Financial Analysis 
   ----------------
   Total Months: 86
-
-
-
   Total: $38382578
-
-
-  int[] myArray = {1, 5, 10, 25};
-int sum = 0;
-int i; 
-
-// Loop through the array elements and store the sum in the sum variable
-for (i = 0; i < myArray.length; i++) {
-  sum += myArray[i];
-}
-
-System.out.println("The sum is: " + sum);
-
-
-  Average Change: -2315.12 //console.log(a % b);// 7 remainder left
+  Average Change: -2315.12
   Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
   Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
   ```
