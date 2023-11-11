@@ -121,10 +121,8 @@ for (var i = 0; i < finances.length; i++) {
 console.log("Highest Profit:", highestNumber);
 console.log("Highest Loss:", lowestNumber);
 
-// Average change#
+// Average change
 
-
-// Initialize variables for the sum and count of differences
 var sumOfDifferences = 0;
 var countOfDifferences = 0;
 
@@ -144,17 +142,36 @@ for (var i = 1; i < finances.length; i++) {
 // Calculate the average change
 var averageChange = sumOfDifferences / countOfDifferences;
 
-// Output the result
+
 console.log("Average change: ", averageChange);
 
 
+//Graetest Increase - Decrease
+
+var greatestIncrease = { month: '', amount: 0 };
+var greatestDecrease = { month: '', amount: 0 };
+for (var i = 1; i < finances.length; i++) {
+  var currentNumber = finances[i][1];
+  var previousNumber = finances[i - 1][1];
+
+    var difference = currentNumber - previousNumber;
+
+    if (difference > greatestIncrease.amount) {
+      greatestIncrease.month = finances[i][0];
+      greatestIncrease.amount = difference;
+  }
+
+   if (difference < greatestDecrease.amount) {
+      greatestDecrease.month = finances[i][0];
+      greatestDecrease.amount = difference;
+  }
+}
+console.log("Greatest Increase in Profit/Loses:", greatestIncrease);
+console.log("Greatest Decrease in Profit/Loses:", greatestDecrease);
 
 
 
-//  const array3 = finances.concat(array2)
 
-//  var concatenatedArray = [].concat(...finances);
-//  console.log(concatenatedArray);
  
 
 
@@ -166,40 +183,3 @@ console.log("Average change: ", averageChange);
 
 
 
-
-//int sum = IntStream.of(a).sum();
-//STEP 2: INITIALIZE arr[] = {1, 2, 3, 4, 5}
-//STEP 3: SET sum = 0.
-//STEP 4: REPEAT STEP 5 UNTIL i<arr.length. //for(i=0; i< arr.length; i++)
-//STEP 5: sum = sum + arr[i]
-//STEP 6: PRINT "Sum of all the elements of an array:"
-//STEP 7: PRINT sum.
-  //var finances string -- use .lenght and return Total months
-  //var finances numbers -- use SUM and return Total $
-
-
-//   const array1 = ['a', 'b', 'c'];
-//   const iterator = array1.values();
-  
-//   for (const value of iterator) {
-//     console.log(value);
-//   }
-  
-  // Expected output: "a"
-  // Expected output: "b"
-  // Expected output: "c"
-
-
-
-  //use camelCase for naming var
-  //find the higher value
-  //find the lower value
-  // find the averange  diferrence betwen months [Total/(Number of months - 1)]
-  // console.log(``` text)
-  // concatenation - join string together
-  // console.log("Total months: " + totalMonths);var netTotal
-
-
-  // for(var i=0; i<totalMonths; i++) {
-  //     netTotal += finances [i][1];
-  //     console.log("Total number of months:", totalMonths);
