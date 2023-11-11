@@ -142,6 +142,10 @@ for (var i = 1; i < finances.length; i++) {
 // Calculate the average change
 var averageChange = sumOfDifferences / countOfDifferences;
 
+// Round to two decimal places
+
+averageChange = parseFloat(averageChange).toFixed(2);
+
 
 console.log("Average change: ", averageChange);
 
