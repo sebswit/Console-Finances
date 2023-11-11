@@ -86,68 +86,77 @@ var finances = [
     ['Jan-2017', 138230],
     ['Feb-2017', 671099],
   ];
-  
-
-
-var netTotal
-
-
-for(var i=0; i<totalMonths; i++) {
-    netTotal += finances [i][1];
-}
-
 
 // Find the total number of months
-const totalMonths = finances.length;
+var totalMonths = finances.length ;
 console.log("Total number of months:", totalMonths);
 
+// Find the total of numbers
+var totalSum = 0;
+for (var i = 0; i < finances.length; i++) {
+  totalSum += finances[i][1]; 
+}
+console.log("Total: $", totalSum);
 
 
 
-//total income;
-let sum = 0;
+// max and low income - not needed
+var highestNumber = Number.NEGATIVE_INFINITY; // Start with the lowest possible value
+var lowestNumber = Number.POSITIVE_INFINITY;  // Start with the highest possible value
 
-for (let i = 0; i < finances.length; i++) {
-    sum += finances[i][1];
+// Iterate through the array to find the highest and lowest numbers
+for (var i = 0; i < finances.length; i++) {
+  var currentNumber = finances[i][1]; 
+
+  // Update highest and lowest numbers if needed
+  if (currentNumber > highestNumber) {
+      highestNumber = currentNumber;
+  }
+
+  if (currentNumber < lowestNumber) {
+      lowestNumber = currentNumber;
+  }
 }
 
-console.log("Total sum of numbers:", sum);
+console.log("Highest Profit:", highestNumber);
+console.log("Highest Loss:", lowestNumber);
+
+// Average change#
+
+
+// Initialize variables for the sum and count of differences
+var sumOfDifferences = 0;
+var countOfDifferences = 0;
+
+// Iterate through the array to calculate differences
+for (var i = 1; i < finances.length; i++) {
+  var currentNumber = finances[i][1];
+  var previousNumber = finances[i - 1][1];
+
+  // Calculate the difference between consecutive numbers
+  var difference = currentNumber - previousNumber;
+
+  // Accumulate the difference and increment the count
+  sumOfDifferences += difference;
+  countOfDifferences++;
+}
+
+// Calculate the average change
+var averageChange = sumOfDifferences / countOfDifferences;
+
+// Output the result
+console.log("Average change: ", averageChange);
 
 
 
-// average difference
-var averageDifference = totalIncome / totalMonths;
 
 
+//  const array3 = finances.concat(array2)
 
-
-
-// max and low income
-const numberArr = finances;
-const highest = Math.max(finances);
-const lowest = Math.min(finances);
-const highLow = finances;
-const result = highLow.reduce((acc, current) => {
-  return {
-    lowest: Math.min(acc.lowest, current),
-    highest: Math.max(acc.highest, current)
-  };
-}, { lowest: Infinity, highest: -Infinity });
-
-
- console.log("Greatest income: "+ highest);
- console.log("Lowest income: "+ lowest);
-
-
-
-//  const Totals = finances;
-//  // Convert array of strings to array of numbers and sum them up
-//  const sum = finances.reduce((acc, numString) => acc + Number(numString), 0);
-//   console.log(sum); 
-
-
-
+//  var concatenatedArray = [].concat(...finances);
+//  console.log(concatenatedArray);
  
+
 
 
 
@@ -188,4 +197,9 @@ const result = highLow.reduce((acc, current) => {
   // find the averange  diferrence betwen months [Total/(Number of months - 1)]
   // console.log(``` text)
   // concatenation - join string together
-  console.log("Total months: " + totalMonths);
+  // console.log("Total months: " + totalMonths);var netTotal
+
+
+  // for(var i=0; i<totalMonths; i++) {
+  //     netTotal += finances [i][1];
+  //     console.log("Total number of months:", totalMonths);
