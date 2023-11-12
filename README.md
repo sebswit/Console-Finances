@@ -1,97 +1,39 @@
-# Unit 4 Challenge: Console Finances
-
+# Console Finances
+## About Me
+My name is Sebastian Switakowski and im learning to become front-end developer. I'm at the begining of my journey, currently learning basics of JavaScript.
 ## Overview
+Purpose of this task was learn to work on two dimensional array in JavaScript. I've learned to use loop and logic comparsion to scoop highest, lowest and average values. Also I've learned how to compare array elements and find difference between them.
 
-In this challenge, you'll be using the concepts you've learned to complete the required activity. This activity presents a real-world situation in which your newfound JavaScript skills will come in handy. You are tasked with creating code for analyzing the financial records of a company. You have been provided with a financial dataset in the `starter/index.js` file.
+*To find number of months I've used 'arr.length'.
+*To find 'Total $' I've used loop starting from first record and adding value until it reaches 86 samples ('arr.lenght').
+*To find 'Highets Profit/Highets Loss' I've used same loop and logic comparsion for result ( see lines 112-119).
+*To find 'Averange change' I had to compare all records with loop but this time backwards (see line 128-131) that requires starting from second record ( i=1 ) and acumulate 'countOfDifferences' with ++ to have 86 of samples(see line 138).
+*To find 'Greatest Increase/Decrease' I've used same loop(backwards) and logic comparsion(lines 158-166).
+*To obtain two decimal points in 'Average change' result I've used "parseFloat().toFixed(2)"  (see line 145)
+*Example of line 137 "sumOfDifferences += difference" is short of "sumOfDifferences = sumOfDifferences + difference" - concatenation
 
 ## Instructions
+1. Open 'index.html' in browser.
+2. Right-click on a blank page and select 'inspect'.
+3. Select tab 'Console'.
 
-1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer.
-
-2. Copy the starter files in your local git repository.
-
-You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
-
-Your task is to write JavaScript code that analyzes the records to calculate each of the following:
-
-* The total number of months included in the dataset.
-
-* The net total amount of Profit/Losses over the entire period.
-
-* The average of the **changes** in Profit/Losses over the entire period.
-  * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
-  * (`Total/(Number of months - 1)`)
-
-* The greatest increase in Profit/Losses (date and amount) over the entire period.
-
-* The greatest decrease in Profit/Losses (date and amount) over the entire period.
-
-When you open your code in the browser your resulting analysis should look similar to the following:
-
-  ```text
+In console you'll se folowing lines:
+  
   Financial Analysis 
-  ----------------
   Total Months: 86
   Total: $38382578
+  Highets Profit: 1170593
+  Highest Loss: -1196225
   Average Change: -2315.12
-  Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-  Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-  ```
-
-Your final code should print the analysis to the console.
-
-**Hints:**
-
-* You will need to do some research on your own for this project!
-
-* Remember, in order to combine strings and variables in the console you will need to use **concatenation**.
-
-* How do you only print to the nearest 100th in JavaScript?
-
-## Grading Requirements
-
-This homework is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Repository Quality: 23%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for variable naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 5%
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
-
----
-
+  Greatest Increase in Profits/Losses: month: Feb-2012, amount: 1926159
+  Greatest Decrease in Profits/Losses: month: Sep-2013, amount: -2196167
+## Resources
+Resources used to create this project can be found at:
+https://developer.mozilla.org/,
+https://stackoverflow.com/,
+https://learnprogramming.online/,
+https://www.freecodecamp.org/,
+https://www.codecademy.com
 ## Copyright
+The project has been created for learning purposes and is no copyright on it.  
 
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
