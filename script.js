@@ -153,16 +153,16 @@ for (var i = 1; i < finances.length; i++) {
   var currentNumber = finances[i][1];
   var previousNumber = finances[i - 1][1];
 
-    var difference = currentNumber - previousNumber;
+    var Difference = currentNumber - previousNumber;
 
-    if (difference > greatestIncrease.amount) {
+    if (Difference > greatestIncrease.amount) {
       greatestIncrease.month = finances[i][0];
-      greatestIncrease.amount = difference;
+      greatestIncrease.amount = Difference;
   }
-
-   if (difference < greatestDecrease.amount) {
+  
+   if (Difference < greatestDecrease.amount) {
       greatestDecrease.month = finances[i][0];
-      greatestDecrease.amount = difference;
+      greatestDecrease.amount = Difference;
   }
 }
 console.log("Greatest Increase in Profit/Loses:", greatestIncrease);
