@@ -1,4 +1,5 @@
 # Console Finances
+
 ## About Me
 My name is Sebastian Switakowski and im learning to become front-end developer. I'm at the begining of my journey, currently learning basics of JavaScript.
 ## Overview
@@ -29,7 +30,7 @@ In console you'll se folowing lines:
  * Greatest Decrease in Profits/Losses: month: Sep-2013, amount: -2196167
 ## Resources
 Resources used to create this project can be found at:
-* https://developer.mozilla.org/;
+[!] https://developer.mozilla.org/;
 * https://stackoverflow.com/;
 * https://learnprogramming.online/,
 * https://www.freecodecamp.org/,
