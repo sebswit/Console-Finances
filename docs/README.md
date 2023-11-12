@@ -30,8 +30,8 @@ In console you'll se folowing lines:
  * Greatest Decrease in Profits/Losses: month: Sep-2013, amount: -2196167
 ## Resources
 Resources used to create this project can be found at:
-[!] https://developer.mozilla.org/;
-* https://stackoverflow.com/;
+* https://developer.mozilla.org/
+* https://stackoverflow.com/
 * https://learnprogramming.online/,
 * https://www.freecodecamp.org/,
 * https://www.codecademy.com
