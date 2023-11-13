@@ -86,30 +86,30 @@ var finances = [
     ['Jan-2017', 138230],
     ['Feb-2017', 671099],
   ];
-//Text
+
 console.log("Financial Analysis");
 
 
-// Find the total number of months
+
 var totalMonths = finances.length ;
 console.log("Total number of months:", totalMonths);
 
-// Find the total of numbers
+
 var totalSum = 0;
 for (var i = 0; i < finances.length; i++) {
   totalSum += finances[i][1]; 
 }
 console.log("Total: $", totalSum);
 
-// max and low income - not needed
-var highestNumber = Number.NEGATIVE_INFINITY; // Start with the lowest possible value
-var lowestNumber = Number.POSITIVE_INFINITY;  // Start with the highest possible value
 
-// Iterate through the array to find the highest and lowest numbers
+var highestNumber = Number.NEGATIVE_INFINITY; 
+var lowestNumber = Number.POSITIVE_INFINITY;  
+
+
 for (var i = 0; i < finances.length; i++) {
   var currentNumber = finances[i][1]; 
 
-  // Update highest and lowest numbers
+  
   if (currentNumber > highestNumber) {
       highestNumber = currentNumber;
   }
@@ -121,32 +121,32 @@ for (var i = 0; i < finances.length; i++) {
 console.log("Highest Profit:", highestNumber);
 console.log("Highest Loss:", lowestNumber);
 
-// Average change
+
 var sumOfDifferences = 0;
 var countOfDifferences = 0;
 
-// Iterate through the array to calculate differences
+
 for (var i = 1; i < finances.length; i++) {
   var currentNumber = finances[i][1];
   var previousNumber = finances[i - 1][1];
 
-  // Calculate the difference between consecutive numbers
+  
   var difference = currentNumber - previousNumber;
 
-  // Accumulate the difference and increment the count
+  
   sumOfDifferences += difference;
   countOfDifferences++;
 }
 
-// Calculate the average change
+
 var averageChange = sumOfDifferences / countOfDifferences;
 
-// Round to two decimal places
+
 averageChange = parseFloat(averageChange).toFixed(2);
 console.log("Average change: ", averageChange);
 
 
-//Graetest Increase - Decrease
+
 var greatestIncrease = { month: '', amount: 0 };
 var greatestDecrease = { month: '', amount: 0 };
 for (var i = 1; i < finances.length; i++) {
